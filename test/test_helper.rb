@@ -9,6 +9,7 @@ require 'ruby-debug' if ENV['DEBUG']
 require 'memcached'
 
 require 'test/unit'
+require 'test/unit/assertions'
 require 'ostruct'
 require 'mocha'
 
