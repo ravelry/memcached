@@ -1,4 +1,3 @@
-gem 'echoe', '>= 4.5.6'
 require 'echoe'
 
 ENV["GEM_CERTIFICATE_CHAIN"]="memcached.pem"
@@ -108,7 +107,7 @@ def with_vm(vm, cmd)
   end
 end
 
-task :test_18 do
+task :test_20 do
   with_vm("/usr/bin/ruby", "test")
 end
 
@@ -120,7 +119,7 @@ task :test_rbx do
   with_vm("/usr/local/rubinius/1.2.4/bin/rbx", "test")
 end
 
-task :test_all => [:test_18, :test_19, :test_rbx]
+task :test_all => [:test_20, :test_19, :test_rbx]
 
 task :prerelease => [:manifest, :test_all, :install]
 
